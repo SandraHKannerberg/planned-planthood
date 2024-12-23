@@ -239,6 +239,10 @@ header {
       }
     }
   }
+
+  .gallery {
+    width: 50%;
+  }
 }
 
 .news {

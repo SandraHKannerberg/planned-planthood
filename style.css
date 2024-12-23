@@ -346,8 +346,19 @@ header {
   margin-right: 2rem;
 }
 
+/* MAIN COMPONENT WITH PRODUCTLIST (CARDS) */
 main {
   grid-area: main;
+
+  ul.cards {
+    display: grid;
+    gap: var(--gap-global);
+  }
+
+  ul.cards > li.card {
+    grid-column: span 3;
+    background-color: var(--clr-neutral-100);
+  }
 }
 
 .plants-inspiration {

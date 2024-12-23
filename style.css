@@ -178,6 +178,7 @@ a {
   }
 }
 
+/* GLOBAL CSS */
 body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
@@ -189,6 +190,7 @@ body {
   border: 3px solid red;
 }
 
+/* GLOBAL GRIDS */
 .grid-global-container {
   display: grid;
   grid-template-areas:
@@ -202,6 +204,11 @@ body {
   grid-template-rows: repeat(6, min-content);
   min-height: 100vh;
   gap: var(--gap-global);
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /* General padding to create the space at the left and right - common layout for the whole page  */
@@ -222,6 +229,7 @@ header {
     justify-content: space-between;
     align-items: center;
     color: var(--clr-accent);
+    grid-column: 3/11;
 
     /* Byt ut mot logobild sedan */
     aside {
@@ -329,13 +337,13 @@ header {
 /* Nässtlar inte denna då den ska användas på flera ställen */
 .circle-container {
   background-color: var(--clr-accent);
-  width: 180px;
-  height: 180px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   color: var(--clr-accent-light-1);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 2rem;
 }
 
 main {
@@ -344,16 +352,18 @@ main {
 
 .plants-inspiration {
   grid-area: plants-inspiration;
+  gap: 0.5rem;
   background-color: var(--clr-neutral-100);
   padding-block: 3rem;
   background-color: var(--clr-neutral-100);
-}
 
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  width: 60%;
-  margin: auto;
+  .circle-container {
+    grid-column: 4/5;
+  }
+
+  section {
+    grid-column: 5/10;
+  }
 }
 
 section {

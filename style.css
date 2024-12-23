@@ -193,12 +193,13 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "news"
+    "hero"
+    "newsletter"
     "main"
-    "plants"
+    "plants-inspiration"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr auto auto;
+  grid-template-rows: repeat(6, min-content);
   min-height: 100vh;
   gap: var(--gap-global);
 }
@@ -208,17 +209,20 @@ body {
   padding-inline: 15rem;
 }
 
+/* COMPONENT HEADER WITH NAVMENU */
 header {
   grid-area: header;
+  gap: var(--gap-global);
+  background-color: var(--clr-neutral-100);
+  text-align: center;
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--clr-accent);
-    background-color: var(--clr-neutral-100);
-    margin: auto;
 
+    /* Byt ut mot logobild sedan */
     aside {
       display: flex;
     }
@@ -239,14 +243,61 @@ header {
       }
     }
   }
-
-  .gallery {
-    width: 50%;
-  }
 }
 
-.news {
-  grid-area: news;
+.hero {
+  grid-area: hero;
+}
+
+/* .gallery {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  img {
+    height: 50%;
+  }
+
+  img:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: aqua;
+  }
+
+  img:nth-child(2) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: blue;
+  }
+
+  img:nth-child(3) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-color: blueviolet;
+  }
+
+  img:nth-child(4) {
+    grid-column: 5/7;
+    grid-row: 1/2;
+    background-color: green;
+  }
+
+  img:nth-child(5) {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    background-color: yellow;
+  }
+
+  img:nth-child(6) {
+    grid-column: 5/7;
+    grid-row: 2/3;
+    background-color: red;
+  }
+} */
+
+.newsletter {
+  grid-area: newsletter;
   background-color: var(--clr-neutral-100);
 }
 
@@ -254,8 +305,8 @@ main {
   grid-area: main;
 }
 
-.plants {
-  grid-area: plants;
+.plants-inspiration {
+  grid-area: plants-inspiration;
   background-color: var(--clr-neutral-100);
 }
 

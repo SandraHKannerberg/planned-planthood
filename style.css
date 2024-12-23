@@ -215,6 +215,7 @@ header {
   gap: var(--gap-global);
   background-color: var(--clr-neutral-100);
   text-align: center;
+  padding-block: 0.75rem;
 
   nav {
     display: flex;
@@ -245,8 +246,22 @@ header {
   }
 }
 
+/* COMPONENT HERO WITH IMAGE GALLERY*/
 .hero {
   grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--gap-global);
+
+  .gallery {
+    width: 100%;
+    height: 30rem;
+    background-color: var(--clr-neutral-100);
+    box-shadow: var(--border-shadow);
+  }
 }
 
 /* .gallery {
@@ -298,7 +313,29 @@ header {
 
 .newsletter {
   grid-area: newsletter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
   background-color: var(--clr-neutral-100);
+
+  /* Förbättra denna lösning */
+  h2 {
+    width: 30%;
+  }
+}
+
+/* COMPONENT CIRCLE WITH ICON */
+/* Nässtlar inte denna då den ska användas på flera ställen */
+.circle-container {
+  background-color: var(--clr-accent);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  color: var(--clr-accent-light-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -308,9 +345,35 @@ main {
 .plants-inspiration {
   grid-area: plants-inspiration;
   background-color: var(--clr-neutral-100);
+  padding-block: 3rem;
+  background-color: var(--clr-neutral-100);
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 60%;
+  margin: auto;
+}
+
+section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+button {
+  width: fit-content;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
+  border: none;
+  border-radius: 2rem;
+  justify-self: end;
 }
 
 footer {
   grid-area: footer;
   background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
 }

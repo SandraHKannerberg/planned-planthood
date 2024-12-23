@@ -12,13 +12,13 @@
       <header class="padding-global">
         <nav>
           <aside class="border">
-            <img
+            <!-- <img
               height="40"
               src="/Assets/images/logo.svg"
               alt="Planned Planthood logotype"
               class="logotype"
-            />
-            <p>Planned Planthood</p>
+            /> -->
+            <p>Logotype</p>
           </aside>
 
           <ul role="list" class="menu">
@@ -38,12 +38,13 @@
           corporis ipsum.
         </p>
         <!-- Skapa en grid av detta med 6 kolumner / 2 rader och lägg in alla bilder -->
-        <!-- <section class="gallery border">
-          <img
+        <section class="gallery border">
+          Gallery
+          <!-- <img
             src="/Assets/images/gallery/gallery-img1.jpg"
             alt="Maskros som hålls upp mot ljuset"
           />
-          <img
+         <img
             src="/Assets/images/gallery/gallery-img2.jpg"
             alt="En näve hallon i en hand"
           />
@@ -62,14 +63,28 @@
           <img
             src="/Assets/images/gallery/gallery-img6.jpg"
             alt="Orange blomma"
-          />
-        </section> -->
+          /> -->
+        </section>
       </article>
 
       <article class="newsletter">
         <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-        <!-- Lägg till email input -->
-        <!-- Lägg till icon-image -->
+        <!-- Förbättra detta för god tillgänglighet. Nu är allt bara utskrivet visuellt -->
+        <!-- <label for="email"
+          >Ange din e-mail:
+          <input
+            type="email"
+            id="email"
+            pattern=".+@example\.com"
+            size="30"
+            required
+          />
+          <button>Skicka</button>
+        </label> -->
+        <aside class="circle-container">
+          <!-- Justera färgen på denna svg så att den är ljust grön -->
+          <img height="90" src="/Assets/images/icon-planting.svg" alt="" />
+        </aside>
       </article>
       <main>
         <ul class="cards">
@@ -223,15 +238,22 @@
       </main>
 
       <article class="plants-inspiration">
-        <!-- Lägg till icon-image -->
-        <h2>Våra tidigare odlingar</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto
-          delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio
-          nam quaerat doloribus?
-        </p>
-        <button>Planterade plantor</button>
+        <div class="grid-wrapper">
+          <aside class="circle-container">
+            <!-- Justera färgen på denna svg så att den är ljust grön -->
+            <img height="90" src="/Assets/images/icon-seedling.svg" alt="" />
+          </aside>
+          <section>
+            <h2>Våra tidigare odlingar</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur,
+              ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum,
+              dolor distinctio nam quaerat doloribus?
+            </p>
+            <button>Planterade plantor</button>
+          </section>
+        </div>
       </article>
 
       <footer>

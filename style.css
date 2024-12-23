@@ -184,6 +184,11 @@ body {
   color: var(--clr-primary-dark);
 }
 
+/* Bara under utveckling - ta bort innan inlämning */
+.border {
+  border: 3px solid red;
+}
+
 .grid-global-container {
   display: grid;
   grid-template-areas:
@@ -198,8 +203,42 @@ body {
   gap: var(--gap-global);
 }
 
+/* General padding to create the space at the left and right - common layout for the whole page  */
+.padding-global {
+  padding-inline: 15rem;
+}
+
 header {
   grid-area: header;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-accent);
+    background-color: var(--clr-neutral-100);
+    margin: auto;
+
+    aside {
+      display: flex;
+    }
+
+    ul.menu {
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+
+      li > a.menu-link {
+        text-transform: uppercase;
+        font-weight: var(--fw-semi-bold);
+        padding: 0.8rem;
+
+        &:hover {
+          background-color: var(--clr-accent);
+        }
+      }
+    }
+  }
 }
 
 .news {

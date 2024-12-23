@@ -127,6 +127,8 @@ main {
   --fw-semi-bold: var(--fw-600);
   --fw-bold: var(--fw-700);
   --fw-x-bold: var(--fw-900);
+
+  --gap-global: 2rem;
 }
 
 /* Utilities */
@@ -180,4 +182,41 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
+}
+
+.grid-global-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "news"
+    "main"
+    "plants"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
+  min-height: 100vh;
+  gap: var(--gap-global);
+}
+
+header {
+  grid-area: header;
+}
+
+.news {
+  grid-area: news;
+  background-color: var(--clr-neutral-100);
+}
+
+main {
+  grid-area: main;
+}
+
+.plants {
+  grid-area: plants;
+  background-color: var(--clr-neutral-100);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--clr-accent);
 }

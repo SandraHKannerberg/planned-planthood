@@ -128,7 +128,12 @@ main {
   --fw-bold: var(--fw-700);
   --fw-x-bold: var(--fw-900);
 
-  --gap-global: 2rem;
+  /* Margin / Padding / Gap */
+  --space-100: 0.625rem;
+  --space-200: 0.75rem;
+  --space-400: 1rem;
+  --space-500: 2rem;
+  --space-600: 3.5rem;
 }
 
 /* Utilities */
@@ -198,11 +203,11 @@ a {
 }
 
 .gap-standard {
-  gap: 1rem;
+  gap: var(--space-400);
 }
 
 .gap-xs {
-  gap: 0.75rem;
+  gap: var(--space-200);
 }
 
 .text-uppercase {
@@ -212,8 +217,10 @@ a {
 /* GLOBAL CSS */
 body {
   font-family: var(--font-base);
+  font-size: var(--fs-400);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
+  line-height: 1.5;
 }
 
 /* Bara under utveckling - ta bort innan inlämning */
@@ -236,7 +243,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto auto auto auto auto;
   min-height: 100vh;
-  gap: var(--gap-global);
+  gap: var(--space-600);
 }
 
 /* Centre the page content - applied to parent */
@@ -255,14 +262,14 @@ body {
 .grid-col-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
+  gap: var(--space-100);
 }
 
 /* Global layout for logotype. Just change the color depending on displayed in header or footer */
 .logotype-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-400);
 
   .logotype-text {
     text-transform: uppercase;
@@ -284,8 +291,8 @@ body {
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
   color: var(--clr-neutral-100);
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
+  padding-block: var(--space-100);
+  padding-inline: var(--space-400);
   transition: all 0.5s ease;
 
   &:hover {
@@ -298,8 +305,8 @@ body {
 .category-btn {
   text-transform: uppercase;
   padding-block: 0.3rem;
-  padding-inline: 0.5rem;
-  font-size: 0.75rem;
+  padding-inline: var(--space-100);
+  font-size: var(--fs-200);
   font-weight: var(--fw-semi-bold);
 }
 
@@ -308,7 +315,7 @@ body {
 header {
   grid-area: header;
   background-color: var(--clr-neutral-100);
-  padding-block: 0.5rem;
+  padding-block: var(--space-100);
 
   /* Green color */
   :has(.logotype-container) {
@@ -326,12 +333,12 @@ header {
     ul.menu {
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
+      gap: var(--space-600);
 
       li > a.menu-link {
         text-transform: uppercase;
         font-weight: var(--fw-semi-bold);
-        padding: 0.8rem;
+        padding: var(--space-400);
         transition: all 0.5s ease-in-out;
 
         &:hover {
@@ -350,7 +357,11 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: var(--gap-global);
+  gap: var(--space-400);
+
+  p {
+    margin-inline: var(--space-500);
+  }
 
   .gallery {
     background-color: var(--clr-neutral-100);
@@ -384,49 +395,7 @@ header {
   }
 }
 
-/* SUBSRCIBE NEWSLETTER */
-.newsletter {
-  grid-area: newsletter;
-  padding-block: 3rem;
-  background-color: var(--clr-neutral-100);
-
-  .subscribe-form {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 3rem;
-    gap: var(--gap-global);
-
-    .input-container {
-      position: relative;
-    }
-    .email-input {
-      width: 100%;
-      border: 1px solid black;
-      padding: 0.5rem;
-      line-height: 1;
-      border-radius: 2rem;
-      text-align: center;
-    }
-    .submit-input {
-      position: absolute;
-      right: 3px;
-      top: 3px;
-      bottom: 3px;
-      padding: 0 0.6rem;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-}
-
 /* CIRCLE BACKGROUND */
-/* Nässtlar inte denna då den ska användas på flera ställen */
-
-/* Justera färgen på ikonerna i denna cirkel så att de är ljust gröna */
 .circle-background {
   background-color: var(--clr-accent);
   height: 12rem;
@@ -439,22 +408,62 @@ header {
   align-items: center;
 }
 
+/* SUBSRCIBE NEWSLETTER */
+.newsletter {
+  grid-area: newsletter;
+  padding-block: var(--space-600);
+  background-color: var(--clr-neutral-100);
+
+  .subscribe-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: var(--space-600);
+    gap: var(--space-400);
+
+    .input-container {
+      position: relative;
+    }
+    .email-input {
+      width: 100%;
+      border: 2px solid var(--clr-neutral-800);
+      padding: var(--space-100);
+      line-height: 1;
+      border-radius: 2rem;
+      text-align: center;
+    }
+    .submit-input {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      bottom: 3px;
+      padding: 0 var(--space-100);
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 /* MAIN COMPONENT WITH PRODUCTLIST (CARDS) */
 main {
   grid-area: main;
 
   ul.cards {
     display: grid;
-    gap: var(--gap-global);
+    gap: var(--space-400);
   }
 
   .card {
     grid-column: span 3;
     background-color: var(--clr-neutral-100);
-    padding: 1rem;
+    padding: var(--space-400);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-400);
+    box-shadow: var(--border-shadow);
 
     img {
       height: 15rem;
@@ -465,7 +474,7 @@ main {
     .category-btn-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: var(--space-100);
     }
   }
 }
@@ -473,13 +482,13 @@ main {
 /* INSPIRATION */
 .plants-inspiration {
   grid-area: plants-inspiration;
-  padding-block: 3rem;
+  padding-block: var(--space-600);
   background-color: var(--clr-neutral-100);
 
   .inspiration-textbox {
     display: grid;
-    gap: var(--gap-global);
-    margin-left: 3rem;
+    gap: var(--space-400);
+    margin-left: var(--space-600);
 
     button {
       justify-self: end;
@@ -487,11 +496,12 @@ main {
   }
 }
 
+/* FOOTER */
 footer {
   grid-area: footer;
   background-color: var(--clr-accent);
   color: var(--clr-neutral-100);
-  padding-block: 3rem;
+  padding-block: var(--space-600);
 
   :has(.logotype-container) {
     .logotype-text {
@@ -505,6 +515,7 @@ footer {
   }
 }
 
+/* KEEP SO MARGIN WHEN SCREEN ARE SMALLER THAN 1024px */
 @media screen and (max-width: 1023px) {
   .max-width {
     width: 95%;
@@ -543,7 +554,7 @@ footer {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: var(--space-500);
       text-align: center;
     }
 
@@ -555,7 +566,7 @@ footer {
 
   main {
     ul.cards {
-      gap: 0.75rem;
+      gap: var(--space-200);
     }
 
     .card {
@@ -567,7 +578,7 @@ footer {
     article {
       flex-direction: column;
       text-align: center;
-      gap: 2rem;
+      gap: var(--space-500);
     }
 
     .inspiration-textbox {
@@ -582,6 +593,10 @@ footer {
 
 /* MOBILE */
 @media screen and (max-width: 450px) {
+  .grid-area-container {
+    gap: var(--space-600);
+  }
+
   .top-hero {
     .gallery {
       img:nth-child(1),
@@ -606,7 +621,7 @@ footer {
 
   main {
     ul.cards {
-      gap: 1rem;
+      gap: var(--space-400);
     }
 
     .card {

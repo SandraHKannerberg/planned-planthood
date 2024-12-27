@@ -190,8 +190,10 @@ body {
   border: 3px solid red;
 }
 
-/* GLOBAL GRIDS */
-.grid-global-container {
+/* LAYOUT */
+
+/* Global grid layout - full width of viewport */
+.grid-area-container {
   display: grid;
   grid-template-areas:
     "header"
@@ -201,40 +203,70 @@ body {
     "plants-inspiration"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, min-content);
+  /* grid-template-rows: repeat(6, auto); */
+  grid-template-rows: min-content auto auto auto auto auto;
   min-height: 100vh;
   gap: var(--gap-global);
 }
 
-.grid-wrapper {
+/* Centre the page content - applied to parent */
+.flex-justify-center-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Sets a max-width to control margins on the page - applied to children */
+.max-width {
+  width: 100%;
+  /* max-width: 1024px; */
+  max-width: 64rem;
+}
+
+/* Grid layout with 12 columns - applied to children */
+.grid-col-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  background-color: aqua;
 }
 
-/* General padding to create the space at the left and right - common layout for the whole page  */
-.padding-global {
-  padding-inline: 15rem;
+.grid-col-12 > * {
+  grid-column: 1/-1;
 }
 
-/* COMPONENT HEADER WITH NAVMENU */
+/* Global layout for logotype. Just change the color depending on displayed in header or footer */
+.logotype-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .logotype-text {
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+  }
+}
+
+/* COMPONENTS */
+
+/* Header with logotype and navbar */
+
 header {
   grid-area: header;
-  gap: var(--gap-global);
   background-color: var(--clr-neutral-100);
-  text-align: center;
-  padding-block: 0.75rem;
+  padding-block: 0.5rem;
+
+  /* Green color */
+  :has(.logotype-container) {
+    .logotype-text {
+      color: var(--clr-accent);
+    }
+  }
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--clr-accent);
-    grid-column: 3/11;
-
-    /* Byt ut mot logobild sedan */
-    aside {
-      display: flex;
-    }
 
     ul.menu {
       display: flex;
@@ -244,7 +276,9 @@ header {
       li > a.menu-link {
         text-transform: uppercase;
         font-weight: var(--fw-semi-bold);
-        padding: 0.8rem;
+
+        /* Förbättra detta */
+        padding-block: 0.8rem;
 
         &:hover {
           background-color: var(--clr-accent);
@@ -397,4 +431,10 @@ footer {
   grid-area: footer;
   background-color: var(--clr-accent);
   color: var(--clr-neutral-100);
+
+  :has(.logotype-container) {
+    .logotype-text {
+      color: var(--clr-neutral-100);
+    }
+  }
 }

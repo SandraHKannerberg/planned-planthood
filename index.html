@@ -7,18 +7,21 @@
     <title>Planned Planthood</title>
   </head>
   <body>
-    <div class="grid-global-container">
-      <!-- Header with menu -->
-      <header class="grid-wrapper">
-        <nav class="border">
-          <aside class="border">
-            <!-- <img
+    <div class="grid-area-container">
+      <!-- Header with logotype and menu -->
+      <header class="flex-justify-center-container flex-align-center">
+        <nav class="max-width">
+          <aside class="logotype-container">
+            <img
               height="40"
               src="/Assets/images/logo.svg"
               alt="Planned Planthood logotype"
-              class="logotype"
-            /> -->
-            <p>Logotype</p>
+              class="logotype-img border"
+            />
+            <div class="logotype-text">
+              <p>Planned</p>
+              <p>Planthood</p>
+            </div>
           </aside>
 
           <ul role="list" class="menu">
@@ -30,254 +33,19 @@
         </nav>
       </header>
 
-      <!-- Hero-section -->
-      <article class="hero padding-global">
-        <h1>Uppskattade växter</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique,
-          corporis ipsum.
-        </p>
-        <!-- Skapa en grid av detta med 6 kolumner / 2 rader och lägg in alla bilder -->
-        <section class="gallery border">
-          Gallery
-          <!-- <img
-            src="/Assets/images/gallery/gallery-img1.jpg"
-            alt="Maskros som hålls upp mot ljuset"
-          />
-         <img
-            src="/Assets/images/gallery/gallery-img2.jpg"
-            alt="En näve hallon i en hand"
-          />
+      <footer class="flex-center-container">
+        <aside class="border logotype-container">
           <img
-            src="/Assets/images/gallery/gallery-img3.jpg"
-            alt="Kaktus mot rosa bakgrund"
+            height="40"
+            src="/Assets/images/logo.svg"
+            alt="Planned Planthood logotype"
+            class="logotype-img"
           />
-          <img
-            src="/Assets/images/gallery/gallery-img4.jpg"
-            alt="Lila blommor med vattendroppar på sig"
-          />
-          <img
-            src="/Assets/images/gallery/gallery-img5.jpg"
-            alt="Glasburk med gröna växter i"
-          />
-          <img
-            src="/Assets/images/gallery/gallery-img6.jpg"
-            alt="Orange blomma"
-          /> -->
-        </section>
-      </article>
-
-      <article class="newsletter">
-        <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-        <!-- Förbättra detta för god tillgänglighet. Nu är allt bara utskrivet visuellt -->
-        <!-- <label for="email"
-          >Ange din e-mail:
-          <input
-            type="email"
-            id="email"
-            pattern=".+@example\.com"
-            size="30"
-            required
-          />
-          <button>Skicka</button>
-        </label> -->
-        <aside class="circle-container">
-          <!-- Justera färgen på denna svg så att den är ljust grön -->
-          <img height="90" src="/Assets/images/icon-planting.svg" alt="" />
+          <div class="logotype-text">
+            <p>Planned</p>
+            <p>Planthood</p>
+          </div>
         </aside>
-      </article>
-      <main>
-        <ul role="list" class="cards grid-wrapper">
-          <li class="card">
-            <img
-              src="/Assets/images/products/gurka.jpg"
-              alt="Produktbild på gurkor"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Blommor Ätbart Grönska -->
-            <h3>Gurka</h3>
-            <p>
-              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
-              bara man är noga med vattning, omplantering, duschning och
-              gödsling.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Coolio 2024-04-01 -->
-          </li>
-          <li class="card">
-            <img
-              src="/Assets/images/products/tomat.jpg"
-              alt="Produktbild på tomater"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Solälskande Lättodlat Ätbart -->
-            <h3>Tomat</h3>
-            <p>
-              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
-              riklig skörd under sommaren.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Anna Odlare 2024-12-05-->
-          </li>
-          <li class="card">
-            <img
-              src="/Assets/images/products/pelargon.jpg"
-              alt="Produktbild på rosa pelargoner"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Dekorativ Färgstark Tålig Blommor -->
-            <h3>Pelargon</h3>
-            <p>
-              En vacker och lättskött blomma som trivs både inne och ute under
-              sommaren.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Blomsterkalle 2024-12-03-->
-          </li>
-          <li class="card">
-            <img
-              src="/Assets/images/products/basilika.jpg"
-              alt="Produktbild på basilika"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!--  Kryddor Doftande Solälskande -->
-            <h3>Basilika</h3>
-            <p>
-              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
-              ett soligt fönster.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Krydd-Malin 2024-12-07-->
-          </li>
-          <li class="card">
-            <img
-              src="/Assets/images/products/sallad.jpg"
-              alt="Produktbild på isbergssallad"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Snabbväxande Ätbart Grönska  -->
-            <h3>Sallad</h3>
-            <p>
-              Sallad är en av de enklaste grönsakerna att odla och ger snabba
-              resultat för färska måltider.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Grönis 2024-12-06 -->
-          </li>
-          <li class="card">
-            <img
-              src="/Assets/images/products/ormbunke.jpg"
-              alt="Produktbild på ormbunke"
-            />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!--  Luftfuktande Grönska Dekorativ  -->
-            <h3>Ormbunke</h3>
-            <p>
-              En klassisk växt som passar perfekt i badrummet eller på skuggiga
-              platser.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Naturvännen 2024-12-08  -->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Blommor Ätbart Grönska -->
-            <h3>Gurka</h3>
-            <p>
-              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
-              bara man är noga med vattning, omplantering, duschning och
-              gödsling.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Coolio 2024-04-01 -->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Solälskande Lättodlat Ätbart -->
-            <h3>Tomat</h3>
-            <p>
-              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
-              riklig skörd under sommaren.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Anna Odlare 2024-12-05-->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Dekorativ Färgstark Tålig Blommor -->
-            <h3>Pelargon</h3>
-            <p>
-              En vacker och lättskött blomma som trivs både inne och ute under
-              sommaren.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Blomsterkalle 2024-12-03-->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!--  Kryddor Doftande Solälskande -->
-            <h3>Basilika</h3>
-            <p>
-              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
-              ett soligt fönster.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Krydd-Malin 2024-12-07-->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!-- Snabbväxande Ätbart Grönska  -->
-            <h3>Sallad</h3>
-            <p>
-              Sallad är en av de enklaste grönsakerna att odla och ger snabba
-              resultat för färska måltider.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Grönis 2024-12-06 -->
-          </li>
-          <li class="card">
-            <img src="" alt="" />
-            <!-- Lägg till kategori-knappar här om tid finns -->
-            <!--  Luftfuktande Grönska Dekorativ  -->
-            <h3>Ormbunke</h3>
-            <p>
-              En klassisk växt som passar perfekt i badrummet eller på skuggiga
-              platser.
-            </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Naturvännen 2024-12-08  -->
-          </li>
-        </ul>
-      </main>
-
-      <article class="plants-inspiration">
-        <div class="grid-wrapper">
-          <aside class="circle-container">
-            <!-- Justera färgen på denna svg så att den är ljust grön -->
-            <img height="90" src="/Assets/images/icon-seedling.svg" alt="" />
-          </aside>
-          <section>
-            <h2>Våra tidigare odlingar</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur,
-              ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum,
-              dolor distinctio nam quaerat doloribus?
-            </p>
-            <button>Planterade plantor</button>
-          </section>
-        </div>
-      </article>
-
-      <footer>
-        <!-- Byt div till logotype bild -->
-        <div>Planned Planthood</div>
-        <!-- <img src="/Assets/images/logo.svg" alt="Planned Planthood logotype" class="logotype"> -->
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
           veniam ducimus aut sint atque ullam alias perspiciatis fuga.

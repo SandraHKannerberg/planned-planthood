@@ -183,7 +183,7 @@ a {
   }
 }
 
-/* Utilities - lägger till dessa själv */
+/* Utilities - layout */
 
 .display-flex {
   display: flex;
@@ -212,6 +212,51 @@ a {
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+/* Utilities - Backgrounds */
+.bg-robust {
+  background-color: var(--clr-robust);
+}
+
+.bg-green {
+  background-color: var(--clr-green);
+}
+
+.bg-flower {
+  background-color: var(--clr-flower);
+}
+
+.bg-sunloving {
+  background-color: var(--clr-sunloving);
+}
+
+.bg-colorful {
+  background-color: var(--clr-colorful);
+}
+
+.bg-air {
+  background-color: var(--clr-air);
+}
+
+.bg-decorative {
+  background-color: var(--clr-decorative);
+}
+
+.bg-edible {
+  background-color: var(--clr-edible);
+}
+
+.bg-easy {
+  background-color: var(--clr-easy);
+}
+
+.bg-fragrant {
+  background-color: var(--clr-fragrant);
+}
+
+.bg-fast {
+  background-color: var(--clr-fast);
 }
 
 /* GLOBAL CSS */
@@ -252,7 +297,7 @@ body {
   justify-content: center;
 }
 
-/* Sets a max-width to control margins on the page - applied to children */
+/* Page wrapper - applied to children */
 .max-width {
   width: 100%;
   max-width: 64rem;
@@ -279,39 +324,7 @@ body {
 
 /* COMPONENTS */
 
-/* BUTTONS */
-.btn {
-  width: fit-content;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.cta-btn {
-  background-color: var(--clr-accent);
-  border: 1px solid var(--clr-accent);
-  color: var(--clr-neutral-100);
-  padding-block: var(--space-100);
-  padding-inline: var(--space-400);
-  transition: all 0.5s ease;
-
-  &:hover {
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-accent);
-    border: 1px solid var(--clr-accent);
-  }
-}
-
-.category-btn {
-  text-transform: uppercase;
-  padding-block: 0.3rem;
-  padding-inline: var(--space-100);
-  font-size: var(--fs-200);
-  font-weight: var(--fw-semi-bold);
-}
-
 /* Header with logotype and navbar */
-
 header {
   grid-area: header;
   background-color: var(--clr-neutral-100);
@@ -349,7 +362,7 @@ header {
   }
 }
 
-/* COMPONENT HERO WITH IMAGE GALLERY*/
+/* Hero-section with image gallery */
 .top-hero {
   grid-area: top-hero;
   display: flex;
@@ -395,20 +408,7 @@ header {
   }
 }
 
-/* CIRCLE BACKGROUND */
-.circle-background {
-  background-color: var(--clr-accent);
-  height: 12rem;
-  width: 12rem;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  color: var(--clr-accent-light-1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* SUBSRCIBE NEWSLETTER */
+/* Subscribe newsletter */
 .newsletter {
   grid-area: newsletter;
   padding-block: var(--space-600);
@@ -447,7 +447,7 @@ header {
   }
 }
 
-/* MAIN COMPONENT WITH PRODUCTLIST (CARDS) */
+/* Main - productlist (cards) */
 main {
   grid-area: main;
 
@@ -479,7 +479,7 @@ main {
   }
 }
 
-/* INSPIRATION */
+/* Inspiration area */
 .plants-inspiration {
   grid-area: plants-inspiration;
   padding-block: var(--space-600);
@@ -496,7 +496,7 @@ main {
   }
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   grid-area: footer;
   background-color: var(--clr-accent);
@@ -515,6 +515,51 @@ footer {
   }
 }
 
+/* Reused buttons */
+.btn {
+  width: fit-content;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.cta-btn {
+  background-color: var(--clr-accent);
+  border: 1px solid var(--clr-accent);
+  color: var(--clr-neutral-100);
+  padding-block: var(--space-100);
+  padding-inline: var(--space-400);
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+  }
+}
+
+.category-btn {
+  text-transform: uppercase;
+  padding-block: 0.3rem;
+  padding-inline: var(--space-100);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-semi-bold);
+}
+
+/* Reused background (the circle) */
+.circle-background {
+  background-color: var(--clr-accent);
+  height: 12rem;
+  width: 12rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  color: var(--clr-accent-light-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RESPONSIVE LAYOUT  */
 /* KEEP SO MARGIN WHEN SCREEN ARE SMALLER THAN 1024px */
 @media screen and (max-width: 1023px) {
   .max-width {

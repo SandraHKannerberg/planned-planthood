@@ -278,13 +278,22 @@ body {
   width: fit-content;
   border: none;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .cta-btn {
   background-color: var(--clr-accent);
+  border: 1px solid var(--clr-accent);
   color: var(--clr-neutral-100);
   padding-block: 0.5rem;
   padding-inline: 1rem;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+  }
 }
 
 .category-btn {
@@ -324,6 +333,7 @@ header {
         text-transform: uppercase;
         font-weight: var(--fw-semi-bold);
         padding: 0.8rem;
+        transition: all 0.5s ease-in-out;
 
         &:hover {
           background-color: var(--clr-accent);
@@ -409,12 +419,6 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      &:hover {
-        background-color: var(--clr-neutral-100);
-        color: var(--clr-accent);
-        border: 1px solid var(--clr-accent);
-      }
     }
   }
 }
@@ -479,13 +483,6 @@ main {
 
     button {
       justify-self: end;
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--clr-neutral-100);
-        color: var(--clr-accent);
-        border: 1px solid var(--clr-accent);
-      }
     }
   }
 }

@@ -204,6 +204,10 @@ a {
   gap: 0.75rem;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 /* GLOBAL CSS */
 body {
   font-family: var(--font-base);
@@ -253,7 +257,6 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
-  background-color: aqua;
 }
 
 .grid-col-12 > * {
@@ -273,6 +276,20 @@ body {
 }
 
 /* COMPONENTS */
+
+/* BUTTONS */
+.btn {
+  width: fit-content;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.cta-btn {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-100);
+}
 
 /* Header with logotype and navbar */
 
@@ -355,31 +372,62 @@ header {
   }
 }
 
+/* SUBSRCIBE NEWSLETTER */
 .newsletter {
   grid-area: newsletter;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-block: 3rem;
   background-color: var(--clr-neutral-100);
 
-  /* Förbättra denna lösning */
-  h2 {
-    width: 30%;
+  article {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-global);
+  }
+
+  .subscribe-form {
+    width: min(40%, 80%);
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .input-container {
+      position: relative;
+    }
+    .email-input {
+      width: 100%;
+      border: 1px solid black;
+      padding: 0.5rem;
+      line-height: 1;
+      border-radius: 2rem;
+      text-align: center;
+    }
+    .submit-input {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      bottom: 3px;
+      padding: 0 0.6rem;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
-/* COMPONENT CIRCLE WITH ICON */
+/* CIRCLE BACKGROUND */
 /* Nässtlar inte denna då den ska användas på flera ställen */
-.circle-container {
+.circle-background {
   background-color: var(--clr-accent);
-  aspect-ratio: 1 / 1;
+  height: 12rem;
+  width: 12rem;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   color: var(--clr-accent-light-1);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 2rem;
 }
 
 /* MAIN COMPONENT WITH PRODUCTLIST (CARDS) */
@@ -416,17 +464,6 @@ main {
 section {
   display: grid;
   gap: 0.5rem;
-}
-
-button {
-  width: fit-content;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  background-color: var(--clr-accent);
-  color: var(--clr-neutral-100);
-  border: none;
-  border-radius: 2rem;
-  justify-self: end;
 }
 
 footer {

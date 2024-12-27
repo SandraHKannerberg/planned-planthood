@@ -366,6 +366,10 @@ header {
       }
     }
   }
+
+  .menu-icon {
+    display: none;
+  }
 }
 
 /* Hero-section with image gallery */
@@ -576,8 +580,23 @@ footer {
 
 /* TABLET */
 @media screen and (max-width: 875px) {
-  header > nav > ul.menu {
-    display: none;
+  header {
+    /* Hide nav-menu */
+    nav > ul.menu {
+      display: none;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+      display: block;
+      font-size: var(--fs-700);
+      padding: 1rem;
+
+      &:hover {
+        background-color: var(--clr-accent);
+        color: var(--clr-neutral-100);
+      }
+    }
   }
 
   .top-hero {

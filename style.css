@@ -188,7 +188,8 @@ a {
   justify-content: space-between;
 }
 
-.align-items-center {
+.flex-center {
+  justify-content: center;
   align-items: center;
 }
 
@@ -257,10 +258,6 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
-}
-
-.grid-col-12 > * {
-  grid-column: 1/-1;
 }
 
 /* Global layout for logotype. Just change the color depending on displayed in header or footer */
@@ -378,18 +375,13 @@ header {
   padding-block: 3rem;
   background-color: var(--clr-neutral-100);
 
-  article {
-    display: flex;
-    justify-content: center;
-    gap: var(--gap-global);
-  }
-
   .subscribe-form {
     width: min(40%, 80%);
-    gap: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 3rem;
+    gap: var(--gap-global);
 
     .input-container {
       position: relative;
@@ -418,6 +410,8 @@ header {
 
 /* CIRCLE BACKGROUND */
 /* Nässtlar inte denna då den ska användas på flera ställen */
+
+/* Justera färgen på ikonerna i denna cirkel så att de är ljust gröna */
 .circle-background {
   background-color: var(--clr-accent);
   height: 12rem;
@@ -445,25 +439,21 @@ main {
   }
 }
 
+/* INSPIRATION */
 .plants-inspiration {
   grid-area: plants-inspiration;
-  gap: 0.5rem;
-  background-color: var(--clr-neutral-100);
   padding-block: 3rem;
   background-color: var(--clr-neutral-100);
 
-  .circle-container {
-    grid-column: 4/5;
-  }
+  .inspiration-textbox {
+    display: grid;
+    gap: var(--gap-global);
+    margin-left: 3rem;
 
-  section {
-    grid-column: 5/10;
+    button {
+      justify-self: end;
+    }
   }
-}
-
-section {
-  display: grid;
-  gap: 0.5rem;
 }
 
 footer {

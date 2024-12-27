@@ -178,6 +178,32 @@ a {
   }
 }
 
+/* Utilities - lägger till dessa själv */
+
+.display-flex {
+  display: flex;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-standard {
+  gap: 1rem;
+}
+
+.gap-xs {
+  gap: 0.75rem;
+}
+
 /* GLOBAL CSS */
 body {
   font-family: var(--font-base);
@@ -431,10 +457,16 @@ footer {
   grid-area: footer;
   background-color: var(--clr-accent);
   color: var(--clr-neutral-100);
+  padding-block: 3rem;
 
   :has(.logotype-container) {
     .logotype-text {
       color: var(--clr-neutral-100);
     }
+  }
+
+  a {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-semi-bold);
   }
 }

@@ -276,8 +276,6 @@ body {
 /* BUTTONS */
 .btn {
   width: fit-content;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
   border: none;
   border-radius: 2rem;
 }
@@ -285,6 +283,16 @@ body {
 .cta-btn {
   background-color: var(--clr-accent);
   color: var(--clr-neutral-100);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.category-btn {
+  text-transform: uppercase;
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semi-bold);
 }
 
 /* Header with logotype and navbar */
@@ -437,7 +445,7 @@ main {
   }
 
   .card {
-    grid-column: span 4;
+    grid-column: span 3;
     background-color: var(--clr-neutral-100);
     padding: 1rem;
     display: flex;
@@ -445,9 +453,15 @@ main {
     gap: 1rem;
 
     img {
-      height: 300px;
+      height: 15rem;
       width: 100%;
       object-fit: cover;
+    }
+
+    .category-btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
   }
 }

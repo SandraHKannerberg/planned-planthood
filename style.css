@@ -551,6 +551,7 @@ main {
         border: 2px solid var(--clr-primary-dark);
         height: 4rem;
         width: 4rem;
+        aspect-ratio: 1/1;
         border-radius: 50%;
 
         img.author-img {
@@ -653,7 +654,7 @@ main {
 /* KEEP SO MARGIN WHEN SCREEN ARE SMALLER THAN 1024px */
 @media screen and (max-width: 1023px) {
   .max-width {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -742,7 +743,7 @@ main {
 }
 
 /* MOBILE */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .grid-area-container {
     gap: var(--space-600);
   }
@@ -782,6 +783,12 @@ main {
 
     .card {
       grid-column: span 12;
+    }
+  }
+
+  .plants-inspiration {
+    .inspiration-textbox {
+      padding-inline: var(--space-100);
     }
   }
 }

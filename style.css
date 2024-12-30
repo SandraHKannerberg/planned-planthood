@@ -153,7 +153,7 @@ main {
 }
 
 /* Global/base */
-/* Lagt till h1 själv */
+/* I have added h1 */
 h1,
 h2,
 h3 {
@@ -161,7 +161,7 @@ h3 {
   line-height: 1;
 }
 
-/* Lagt till h1 själv */
+/* I have added h1 */
 h1,
 h2 {
   font-size: var(--fs-700);
@@ -434,25 +434,19 @@ header {
 
     .input-container {
       position: relative;
+      border: 2px solid var(--clr-neutral-800);
+      border-radius: 2rem;
+      display: flex;
+      justify-content: space-between;
     }
     .email-input {
       width: 100%;
-      border: 2px solid var(--clr-neutral-800);
-      padding: var(--space-100);
-      line-height: 1;
-      border-radius: 2rem;
       text-align: center;
+      border: none;
+      border-radius: 2rem;
     }
     .submit-input {
-      position: absolute;
-      right: 3px;
-      top: 3px;
-      bottom: 3px;
-      padding: 0 var(--space-100);
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 3px;
     }
   }
 }
@@ -687,6 +681,12 @@ footer {
         grid-column: span 6;
         grid-row: span 1;
       }
+    }
+  }
+
+  .newsletter {
+    .subscribe-form {
+      width: 100%;
     }
   }
 

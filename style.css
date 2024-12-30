@@ -300,18 +300,21 @@ body {
 }
 
 /* Centre the page content - applied to parent */
+/* Source: Pluralsight - Creating Layouts with CSS by Matt Henry */
 .flex-justify-center-container {
   display: flex;
   justify-content: center;
 }
 
 /* Page wrapper - applied to children */
+/* Source: Pluralsight - Creating Layouts with CSS by Matt Henry */
 .max-width {
   width: 100%;
   max-width: 64rem;
 }
 
 /* Grid layout with 12 columns - applied to children */
+/* Source: Pluralsight - Creating Layouts with CSS by Matt Henry */
 .grid-col-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -511,10 +514,24 @@ main {
     gap: var(--space-400);
     box-shadow: var(--border-shadow);
 
-    img.plant-img {
+    .plant-img-container {
+      position: relative;
       height: 15rem;
-      width: 100%;
-      object-fit: cover;
+
+      img.plant-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      img.overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        opacity: 0.5;
+      }
     }
 
     .category-btn-container {

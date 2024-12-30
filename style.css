@@ -511,7 +511,7 @@ main {
     gap: var(--space-400);
     box-shadow: var(--border-shadow);
 
-    img {
+    img.plant-img {
       height: 15rem;
       width: 100%;
       object-fit: cover;
@@ -523,6 +523,10 @@ main {
       gap: var(--space-100);
     }
 
+    p.plant-description {
+      flex-grow: 1;
+    }
+
     .card-footer {
       gap: var(--space-400);
 
@@ -532,7 +536,7 @@ main {
         width: 4rem;
         border-radius: 50%;
 
-        img {
+        img.author-img {
           height: 100%;
         }
       }

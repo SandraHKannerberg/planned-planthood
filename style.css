@@ -304,6 +304,7 @@ body {
 .flex-justify-center-container {
   display: flex;
   justify-content: center;
+  container-type: inline-size;
 }
 
 /* Page wrapper - applied to children */
@@ -496,7 +497,7 @@ header {
   }
 }
 
-/* Main - productlist (cards) */
+/* Main - including all cards */
 main {
   grid-area: main;
 
@@ -650,16 +651,30 @@ main {
   align-items: center;
 }
 
-/* RESPONSIVE LAYOUT  */
-/* KEEP SO MARGIN WHEN SCREEN ARE SMALLER THAN 1024px */
-@media screen and (max-width: 1023px) {
+/* RESPONSIVE LAYOUT WITH @CONTAINER */
+/* ADJUST THE WIDTH TO KEEP SPACE/MARGIN ON THE SIDES WHEN SCREEN ARE SMALLER THAN 1024px */
+
+@container (width < 1024px) {
   .max-width {
     width: 95%;
   }
 }
 
-/* TABLET */
-@media screen and (max-width: 875px) {
+/* TABLET STEP 1*/
+@container (width >= 875px) and (width <= 950px) {
+  main {
+    ul.cards {
+      gap: var(--space-200);
+    }
+
+    .card {
+      grid-column: span 4;
+    }
+  }
+}
+
+/* TABLET STEP 2 */
+@container (width < 875px) {
   header {
     /* Hide nav-menu */
     nav > ul.menu {
@@ -716,10 +731,6 @@ main {
   }
 
   main {
-    ul.cards {
-      gap: var(--space-200);
-    }
-
     .card {
       grid-column: span 6;
     }
@@ -743,7 +754,7 @@ main {
 }
 
 /* MOBILE */
-@media screen and (max-width: 500px) {
+@container (width < 500px) {
   .grid-area-container {
     gap: var(--space-600);
   }

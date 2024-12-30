@@ -319,6 +319,11 @@ body {
   display: flex;
   align-items: center;
   gap: var(--space-400);
+  height: 3rem;
+
+  img {
+    height: 100%;
+  }
 
   .logotype-text {
     text-transform: uppercase;
@@ -326,6 +331,28 @@ body {
     font-weight: var(--fw-500);
     line-height: 0.9;
   }
+
+  &:hover,
+  &:focus {
+    border: 2px solid var(--clr-accent);
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/* FOCUS STYLING */
+
+/* No outline when links are in focus for a more stylish design */
+a:focus {
+  outline: none;
+}
+
+.cta-btn:focus,
+input[type="email"]:focus {
+  background-color: var(--clr-accent-light-1);
+  color: var(--clr-accent);
+  font-weight: var(--fw-semi-bold);
+  outline-color: var(--clr-accent);
 }
 
 /* COMPONENTS */
@@ -356,12 +383,19 @@ header {
 
       li > a.menu-link {
         text-transform: uppercase;
+        text-decoration: none;
         font-weight: var(--fw-semi-bold);
         padding: var(--space-400);
-        transition: all 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out;
 
         &:hover {
           background-color: var(--clr-accent);
+        }
+
+        &:focus-visible {
+          outline: none;
+          text-decoration: underline;
+          color: var(--clr-accent);
         }
       }
     }
@@ -433,20 +467,19 @@ header {
     gap: var(--space-400);
 
     .input-container {
-      position: relative;
       border: 2px solid var(--clr-neutral-800);
       border-radius: 2rem;
-      display: flex;
-      justify-content: space-between;
+      padding: 3px;
     }
     .email-input {
       width: 100%;
-      text-align: center;
       border: none;
       border-radius: 2rem;
-    }
-    .submit-input {
-      margin: 3px;
+      padding-left: var(--space-400);
+
+      &::placeholder {
+        text-align: center;
+      }
     }
   }
 }
@@ -519,7 +552,7 @@ footer {
   }
 }
 
-/* Reused buttons */
+/* Buttons */
 .btn {
   width: fit-content;
   border: none;
@@ -529,7 +562,7 @@ footer {
 
 .cta-btn {
   background-color: var(--clr-accent);
-  border: 1px solid var(--clr-accent);
+  border: 2px solid var(--clr-accent);
   color: var(--clr-neutral-100);
   padding-block: var(--space-100);
   padding-inline: var(--space-400);
@@ -539,7 +572,7 @@ footer {
   &:hover {
     background-color: var(--clr-neutral-100);
     color: var(--clr-accent);
-    border: 1px solid var(--clr-accent);
+    border: 2px solid var(--clr-accent);
   }
 }
 

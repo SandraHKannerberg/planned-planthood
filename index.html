@@ -1,84 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Planned Planthood</title>
+    <script
+      src="https://kit.fontawesome.com/bce314e193.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-Planned Planthood
+    <div class="grid-area-container">
+      <!-- Header with logotype and menu -->
+      <header class="flex-justify-center-container">
+        <nav class="max-width">
+          <aside class="logotype-container">
+            <img
+              height="40"
+              src="/Assets/images/logo-accent-clr.svg"
+              alt="Planned Planthood logotype"
+              class="logotype-img"
+            />
+            <div class="logotype-text">
+              <p>Planned</p>
+              <p>Planthood</p>
+            </div>
+          </aside>
 
-Hem
-Historik
-Tips
-Kontakt
+          <ul role="list" class="menu">
+            <li><a href="#" class="menu-link">Hem</a></li>
+            <li><a href="#" class="menu-link">Historik</a></li>
+            <li><a href="#" class="menu-link">Tips</a></li>
+            <li><a href="#" class="menu-link">Kontakt</a></li>
+          </ul>
 
-Uppskattade växter
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.
+          <!-- Show Menu-icon for small device -->
+          <i class="fa-solid fa-bars menu-icon"></i>
+        </nav>
+      </header>
 
-Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
+      <!-- Hero-section -->
+      <section class="top-hero flex-justify-center-container">
+        <h1>Uppskattade växter</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique,
+          corporis ipsum.
+        </p>
+        <!-- Gallery with grid 12 columns layout -->
+        <article class="gallery max-width grid-col-12">
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img1.jpg"
+            alt="Maskros som hålls upp mot ljuset"
+          />
 
-Blommor
-Ätbart
-Grönska
-Gurka
-Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.
-Coolio
-2024-04-01
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img2.jpg"
+            alt="En näve hallon i en hand"
+          />
 
-Solälskande
-Lättodlat
-Ätbart
-Tomat
-En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.
-Anna Odlare
-2024-12-05
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img3.jpg"
+            alt="Kaktus mot rosa bakgrund"
+          />
 
-Dekorativ
-Färgstark
-Tålig
-Blommor
-Pelargon
-En vacker och lättskött blomma som trivs både inne och ute under sommaren.
-Blomsterkalle
-2024-12-03
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img4.jpg"
+            alt="Lila blommor med vattendroppar på sig"
+          />
 
-Kryddor
-Doftande
-Solälskande
-Basilika
-En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
-Krydd-Malin
-2024-12-07
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img5.jpg"
+            alt="Gröna bladväxter"
+          />
 
-Snabbväxande
-Ätbart
-Grönska
-Sallad
-Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.
-Grönis
-2024-12-06
+          <img
+            class="gallery-img"
+            src="/Assets/images/gallery/gallery-img6.jpg"
+            alt="Orange blomma"
+          />
+        </article>
+      </section>
 
-Luftfuktande
-Grönska
-Dekorativ
-Ormbunke
-En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
-Naturvännen
-2024-12-08
+      <!-- Subscribe section -->
+      <section class="newsletter flex-justify-center-container">
+        <article class="max-width display-flex flex-center">
+          <form action="" class="subscribe-form">
+            <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+            <!-- Förbättra detta för god tillgänglighet. Nu är allt bara utskrivet visuellt -->
+            <div class="input-container">
+              <label for="email" class="visually-hidden"
+                >Ange din e-mail:
+              </label>
+              <input
+                class="email-input"
+                type="email"
+                id="email"
+                placeholder="email@domain.com"
+                pattern=".+@example\.com"
+                required
+              />
+              <input
+                type="submit"
+                value="Skicka"
+                class="btn cta-btn text-uppercase submit-input"
+              />
+            </div>
+          </form>
 
-Våra tidigare odlingar
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
-Planterade plantor
+          <figure class="circle-background">
+            <img
+              height="90"
+              src="/Assets/images/icon-planting.svg"
+              alt="Fröpåse som det hälls frön ifrån. Planetering pågår."
+            />
+          </figure>
+        </article>
+      </section>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?
-Telefon: 020-1234567
-info@plannedplant.com
+      <!-- Main with productlist / productcards -->
 
-Hem
-Historik
-Tips
-Kontakt
+      <main class="flex-justify-center-container">
+        <ul role="list" class="cards max-width grid-col-12">
+          <li class="card">
+            <img
+              src="/Assets/images/products/gurka.jpg"
+              alt="Produktbild på gurkor"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Blommor</button>
+              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn">Grönska</button>
+            </div>
+
+            <h3>Gurka</h3>
+            <p>
+              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
+              bara man är noga med vattning, omplantering, duschning och
+              gödsling.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Coolio 2024-04-01 -->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/tomat.jpg"
+              alt="Produktbild på tomater"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Solälskande</button>
+              <button class="btn category-btn">Lättodlat</button>
+              <button class="btn category-btn">Ätbart</button>
+            </div>
+
+            <h3>Tomat</h3>
+            <p>
+              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
+              riklig skörd under sommaren.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Anna Odlare 2024-12-05-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/pelargon.jpg"
+              alt="Produktbild på rosa pelargoner"
+            />
+
+            <div class="category-btn-container">
+              <button class="btn category-btn">Dekorativ</button>
+              <button class="btn category-btn">Färgstark</button>
+              <button class="btn category-btn">Tålig</button>
+              <button class="btn category-btn">Blommor</button>
+            </div>
+            <h3>Pelargon</h3>
+            <p>
+              En vacker och lättskött blomma som trivs både inne och ute under
+              sommaren.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Blomsterkalle 2024-12-03-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/basilika.jpg"
+              alt="Produktbild på basilika"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Kryddor</button>
+              <button class="btn category-btn">Doftande</button>
+              <button class="btn category-btn">Solälskande</button>
+            </div>
+
+            <h3>Basilika</h3>
+            <p>
+              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
+              ett soligt fönster.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Krydd-Malin 2024-12-07-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/sallad.jpg"
+              alt="Produktbild på isbergssallad"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Snabbväxande</button>
+              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn">Grönska</button>
+            </div>
+            <h3>Sallad</h3>
+            <p>
+              Sallad är en av de enklaste grönsakerna att odla och ger snabba
+              resultat för färska måltider.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Grönis 2024-12-06 -->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/ormbunke.jpg"
+              alt="Produktbild på ormbunke"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Luftfuktande</button>
+              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn">Dekorativ</button>
+            </div>
+            <h3>Ormbunke</h3>
+            <p>
+              En klassisk växt som passar perfekt i badrummet eller på skuggiga
+              platser.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Naturvännen 2024-12-08  -->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/gurka.jpg"
+              alt="Produktbild på gurkor"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Blommor</button>
+              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn">Grönska</button>
+            </div>
+
+            <h3>Gurka</h3>
+            <p>
+              Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
+              bara man är noga med vattning, omplantering, duschning och
+              gödsling.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Coolio 2024-04-01 -->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/tomat.jpg"
+              alt="Produktbild på tomater"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Solälskande</button>
+              <button class="btn category-btn">Lättodlat</button>
+              <button class="btn category-btn">Ätbart</button>
+            </div>
+
+            <h3>Tomat</h3>
+            <p>
+              En perfekt grönsak att odla på balkongen eller i trädgården. Ger
+              riklig skörd under sommaren.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Anna Odlare 2024-12-05-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/pelargon.jpg"
+              alt="Produktbild på rosa pelargoner"
+            />
+
+            <div class="category-btn-container">
+              <button class="btn category-btn">Dekorativ</button>
+              <button class="btn category-btn">Färgstark</button>
+              <button class="btn category-btn">Tålig</button>
+              <button class="btn category-btn">Blommor</button>
+            </div>
+            <h3>Pelargon</h3>
+            <p>
+              En vacker och lättskött blomma som trivs både inne och ute under
+              sommaren.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!-- Blomsterkalle 2024-12-03-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/basilika.jpg"
+              alt="Produktbild på basilika"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Kryddor</button>
+              <button class="btn category-btn">Doftande</button>
+              <button class="btn category-btn">Solälskande</button>
+            </div>
+
+            <h3>Basilika</h3>
+            <p>
+              En fantastisk krydda för pastarätter och sallader. Trivs bäst i
+              ett soligt fönster.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Krydd-Malin 2024-12-07-->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/sallad.jpg"
+              alt="Produktbild på isbergssallad"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Snabbväxande</button>
+              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn">Grönska</button>
+            </div>
+            <h3>Sallad</h3>
+            <p>
+              Sallad är en av de enklaste grönsakerna att odla och ger snabba
+              resultat för färska måltider.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Grönis 2024-12-06 -->
+          </li>
+          <li class="card">
+            <img
+              src="/Assets/images/products/ormbunke.jpg"
+              alt="Produktbild på ormbunke"
+            />
+            <div class="category-btn-container">
+              <button class="btn category-btn">Luftfuktande</button>
+              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn">Dekorativ</button>
+            </div>
+            <h3>Ormbunke</h3>
+            <p>
+              En klassisk växt som passar perfekt i badrummet eller på skuggiga
+              platser.
+            </p>
+            <!-- Lägg till avatar här om tid finns -->
+            <!--  Naturvännen 2024-12-08  -->
+          </li>
+        </ul>
+      </main>
+
+      <!-- Inspiration section -->
+      <section class="plants-inspiration flex-justify-center-container">
+        <article class="max-width display-flex flex-center">
+          <figure class="circle-background">
+            <img
+              height="90"
+              src="/Assets/images/icon-seedling.svg"
+              alt="Ikon av en krukväxt"
+            />
+          </figure>
+
+          <section class="inspiration-textbox">
+            <h2>Våra tidigare odlingar</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur,
+              ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum,
+              dolor distinctio nam quaerat doloribus?
+            </p>
+            <button class="btn cta-btn">Planterade plantor</button>
+          </section>
+        </article>
+      </section>
+
+      <footer class="flex-justify-center-container">
+        <div class="display-flex flex-space-between max-width">
+          <article class="contact-info display-flex flex-column gap-standard">
+            <aside class="logotype-container">
+              <img
+                height="40"
+                src="/Assets/images/logo.svg"
+                alt="Planned Planthood logotype"
+                class="logotype-img"
+              />
+              <div class="logotype-text">
+                <p>Planned</p>
+                <p>Planthood</p>
+              </div>
+            </aside>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque,
+              veniam ducimus aut sint atque ullam alias perspiciatis fuga.
+              Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
+              earum. Iure, eius molestias?
+            </p>
+            <!-- Justera ikonerna så att det blir bättre format -->
+
+            <a
+              href="tel:020-1234567"
+              class="display-flex gap-xs align-items-center"
+              ><img
+                height="15"
+                src="/Assets/images/icon-phone.svg"
+                alt="Ikon telefon"
+              />Telefon: 020-1234567</a
+            >
+
+            <a
+              href="mailto:info@plannedplant.com"
+              class="display-flex gap-xs align-items-center"
+            >
+              <img
+                height="15"
+                src="/Assets/images/icon-email.svg"
+                alt="Ikon e-mail"
+              />info@plannedplant.com</a
+            >
+          </article>
+
+          <nav>
+            <ul
+              role="list"
+              class="menu-footer display-flex flex-column gap-standard"
+            >
+              <li><a href="#" class="menu-footer-link">Hem</a></li>
+              <li><a href="#" class="menu-footer-link">Historik</a></li>
+              <li><a href="#" class="menu-footer-link">Tips</a></li>
+              <li><a href="#" class="menu-footer-link">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

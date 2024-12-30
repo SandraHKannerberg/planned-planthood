@@ -263,6 +263,10 @@ a {
   background-color: var(--clr-fast);
 }
 
+.bg-spicy {
+  background-color: var(--clr-accent);
+}
+
 /* GLOBAL CSS */
 body {
   font-family: var(--font-base);
@@ -587,6 +591,7 @@ footer {
   padding-inline: var(--space-100);
   font-size: var(--fs-200);
   font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-100);
 }
 
 /* Reused background (the circle) */

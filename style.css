@@ -472,7 +472,7 @@ header {
   background-color: var(--clr-neutral-100);
 
   .subscribe-form {
-    width: min(25rem, 100%);
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -509,13 +509,14 @@ main {
   .card {
     display: grid;
     grid-column: span 3;
+    grid-row: span 6;
+    grid-template-rows: subgrid;
+    gap: var(--space-400);
     background-color: var(--clr-neutral-100);
     padding: var(--space-400);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-400);
     box-shadow: var(--border-shadow);
 
+    /* Container with plant-img and overlay */
     .plant-img-container {
       position: relative;
       height: 15rem;
@@ -534,16 +535,6 @@ main {
         width: 5rem;
         opacity: 0.5;
       }
-    }
-
-    .category-btn-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-100);
-    }
-
-    p.plant-description {
-      flex-grow: 1;
     }
 
     .card-footer {
@@ -637,6 +628,7 @@ main {
   font-size: var(--fs-200);
   font-weight: var(--fw-semi-bold);
   color: var(--clr-neutral-100);
+  margin-block: 0.2rem;
 }
 
 /* Reused background (the circle) */
@@ -653,15 +645,15 @@ main {
 }
 
 /* RESPONSIVE LAYOUT WITH @CONTAINER */
-/* ADJUST THE WIDTH TO KEEP SPACE/MARGIN ON THE SIDES WHEN SCREEN ARE SMALLER THAN 1024px */
 
+/* ADJUST THE WIDTH TO KEEP SPACE/MARGIN ON THE SIDES WHEN SCREEN ARE SMALLER THAN 1024px */
 @container (width < 1024px) {
   .max-width {
     width: 95%;
   }
 }
 
-/* TABLET STEP 1*/
+/* TABLET STEP 1 - 3 COLUMNS*/
 @container (width >= 875px) and (width <= 950px) {
   main {
     ul.cards {
@@ -674,7 +666,7 @@ main {
   }
 }
 
-/* TABLET STEP 2 */
+/* TABLET STEP 2 - 2 COLUMNS*/
 @container (width < 875px) {
   header {
     /* Hide nav-menu */
@@ -726,7 +718,7 @@ main {
     }
 
     .subscribe-form {
-      width: 80%;
+      max-width: 95%;
       margin-right: 0;
     }
   }

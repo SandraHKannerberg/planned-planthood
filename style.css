@@ -630,6 +630,14 @@ main {
   font-weight: var(--fw-semi-bold);
   color: var(--clr-neutral-100);
   margin-block: 0.2rem;
+
+  &:hover,
+  &:focus {
+    outline-offset: 4px;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+  }
 }
 
 /* Reused background (the circle) */

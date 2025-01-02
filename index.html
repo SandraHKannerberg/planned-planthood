@@ -15,9 +15,8 @@
       <!-- Header with logotype and menu -->
       <header class="flex-justify-center-container">
         <nav class="max-width">
-          <aside class="logotype-container">
+          <a href="#" class="logotype-container">
             <img
-              height="40"
               src="/Assets/images/logo-accent-clr.svg"
               alt="Planned Planthood logotype"
               class="logotype-img"
@@ -26,17 +25,17 @@
               <p>Planned</p>
               <p>Planthood</p>
             </div>
-          </aside>
+          </a>
 
-          <ul role="list" class="menu">
-            <li><a href="#" class="menu-link">Hem</a></li>
-            <li><a href="#" class="menu-link">Historik</a></li>
-            <li><a href="#" class="menu-link">Tips</a></li>
-            <li><a href="#" class="menu-link">Kontakt</a></li>
+          <ul role="list" class="header-menu">
+            <li><a href="#" class="header-menu-link">Hem</a></li>
+            <li><a href="#" class="header-menu-link">Historik</a></li>
+            <li><a href="#" class="header-menu-link">Tips</a></li>
+            <li><a href="#" class="header-menu-link">Kontakt</a></li>
           </ul>
 
-          <!-- Show Menu-icon for small device -->
-          <i class="fa-solid fa-bars menu-icon"></i>
+          <!-- Show menu-bars-icon for small device -->
+          <i class="fa-solid fa-bars menu-bars-icon"></i>
         </nav>
       </header>
 
@@ -90,10 +89,9 @@
       <!-- Subscribe section -->
       <section class="newsletter flex-justify-center-container">
         <article class="max-width display-flex flex-center">
-          <form action="" class="subscribe-form">
+          <form class="subscribe-form">
             <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
-            <!-- Förbättra detta för god tillgänglighet. Nu är allt bara utskrivet visuellt -->
-            <div class="input-container">
+            <div class="input-container display-flex flex-space-between">
               <label for="email" class="visually-hidden"
                 >Ange din e-mail:
               </label>
@@ -102,7 +100,7 @@
                 type="email"
                 id="email"
                 placeholder="email@domain.com"
-                pattern=".+@example\.com"
+                autocomplete="email"
                 required
               />
               <input
@@ -117,7 +115,7 @@
             <img
               height="90"
               src="/Assets/images/icon-planting.svg"
-              alt="Fröpåse som det hälls frön ifrån. Planetering pågår."
+              alt="Fröpåse som det hälls frön ifrån. Plantering pågår."
             />
           </figure>
         </article>
@@ -128,232 +126,490 @@
       <main class="flex-justify-center-container">
         <ul role="list" class="cards max-width grid-col-12">
           <li class="card">
-            <img
-              src="/Assets/images/products/gurka.jpg"
-              alt="Produktbild på gurkor"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/gurka.jpg"
+                alt="Produktbild på gurkor"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Blommor</button>
-              <button class="btn category-btn">Ätbart</button>
-              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn bg-flower">Blommor</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
+              <button class="btn category-btn bg-green">Grönska</button>
             </div>
 
             <h3>Gurka</h3>
-            <p>
+            <p class="plant-description">
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
               bara man är noga med vattning, omplantering, duschning och
               gödsling.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Coolio 2024-04-01 -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/coolio.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Coolio</p>
+                <time class="date" datetime="2024-04-01">2024-04-01</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/tomat.jpg"
-              alt="Produktbild på tomater"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/tomat.jpg"
+                alt="Produktbild på tomater"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Solälskande</button>
-              <button class="btn category-btn">Lättodlat</button>
-              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn bg-sunloving">Solälskande</button>
+              <button class="btn category-btn bg-easy">Lättodlat</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
             </div>
 
             <h3>Tomat</h3>
-            <p>
+            <p class="plant-description">
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger
               riklig skörd under sommaren.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Anna Odlare 2024-12-05-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/anna-odlare.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Anna Odlare</p>
+                <time class="date" datetime="2024-12-05">2024-12-05</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/pelargon.jpg"
-              alt="Produktbild på rosa pelargoner"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/pelargon.jpg"
+                alt="Produktbild på rosa pelargoner"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
 
             <div class="category-btn-container">
-              <button class="btn category-btn">Dekorativ</button>
-              <button class="btn category-btn">Färgstark</button>
-              <button class="btn category-btn">Tålig</button>
-              <button class="btn category-btn">Blommor</button>
+              <button class="btn category-btn bg-decorative">Dekorativ</button>
+              <button class="btn category-btn bg-colorful">Färgstark</button>
+              <button class="btn category-btn bg-robust">Tålig</button>
+              <button class="btn category-btn bg-flower">Blommor</button>
             </div>
             <h3>Pelargon</h3>
-            <p>
+            <p class="plant-description">
               En vacker och lättskött blomma som trivs både inne och ute under
               sommaren.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Blomsterkalle 2024-12-03-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/blomsterkalle.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Blomsterkalle</p>
+                <time class="date" datetime="2024-12-03">2024-12-03</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/basilika.jpg"
-              alt="Produktbild på basilika"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/basilika.jpg"
+                alt="Produktbild på basilika"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
             <div class="category-btn-container">
-              <button class="btn category-btn">Kryddor</button>
-              <button class="btn category-btn">Doftande</button>
-              <button class="btn category-btn">Solälskande</button>
+              <button class="btn category-btn bg-spicy">Kryddor</button>
+              <button class="btn category-btn bg-fragrant">Doftande</button>
+              <button class="btn category-btn bg-sunloving">Solälskande</button>
             </div>
 
             <h3>Basilika</h3>
-            <p>
+            <p class="plant-description">
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i
               ett soligt fönster.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Krydd-Malin 2024-12-07-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/krydd-malin.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Krydd-Malin</p>
+                <time class="date" datetime="2024-12-07">2024-12-07</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/sallad.jpg"
-              alt="Produktbild på isbergssallad"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/sallad.jpg"
+                alt="Produktbild på isbergssallad"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Snabbväxande</button>
-              <button class="btn category-btn">Ätbart</button>
-              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn bg-fast">Snabbväxande</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
+              <button class="btn category-btn bg-green">Grönska</button>
             </div>
             <h3>Sallad</h3>
-            <p>
+            <p class="plant-description">
               Sallad är en av de enklaste grönsakerna att odla och ger snabba
               resultat för färska måltider.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Grönis 2024-12-06 -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/gronis.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Grönis</p>
+                <time class="date" datetime="2024-12-06">2024-12-06</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/ormbunke.jpg"
-              alt="Produktbild på ormbunke"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/ormbunke.jpg"
+                alt="Produktbild på ormbunke"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
             <div class="category-btn-container">
-              <button class="btn category-btn">Luftfuktande</button>
-              <button class="btn category-btn">Grönska</button>
-              <button class="btn category-btn">Dekorativ</button>
+              <button class="btn category-btn bg-air">Luftfuktande</button>
+              <button class="btn category-btn bg-green">Grönska</button>
+              <button class="btn category-btn bg-decorative">Dekorativ</button>
             </div>
             <h3>Ormbunke</h3>
-            <p>
+            <p class="plant-description">
               En klassisk växt som passar perfekt i badrummet eller på skuggiga
               platser.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Naturvännen 2024-12-08  -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/naturvannen.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Naturvännen</p>
+                <time class="date" datetime="2024-12-08">2024-12-08</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/gurka.jpg"
-              alt="Produktbild på gurkor"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/gurka.jpg"
+                alt="Produktbild på gurkor"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Blommor</button>
-              <button class="btn category-btn">Ätbart</button>
-              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn bg-flower">Blommor</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
+              <button class="btn category-btn bg-green">Grönska</button>
             </div>
 
             <h3>Gurka</h3>
-            <p>
+            <p class="plant-description">
               Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,
               bara man är noga med vattning, omplantering, duschning och
               gödsling.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Coolio 2024-04-01 -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/coolio.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Coolio</p>
+                <time class="date" datetime="2024-04-01">2024-04-01</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/tomat.jpg"
-              alt="Produktbild på tomater"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/tomat.jpg"
+                alt="Produktbild på tomater"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Solälskande</button>
-              <button class="btn category-btn">Lättodlat</button>
-              <button class="btn category-btn">Ätbart</button>
+              <button class="btn category-btn bg-sunloving">Solälskande</button>
+              <button class="btn category-btn bg-easy">Lättodlat</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
             </div>
 
             <h3>Tomat</h3>
-            <p>
+            <p class="plant-description">
               En perfekt grönsak att odla på balkongen eller i trädgården. Ger
               riklig skörd under sommaren.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Anna Odlare 2024-12-05-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/anna-odlare.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Anna Odlare</p>
+                <time class="date" datetime="2024-12-05">2024-12-05</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/pelargon.jpg"
-              alt="Produktbild på rosa pelargoner"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/pelargon.jpg"
+                alt="Produktbild på rosa pelargoner"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
 
             <div class="category-btn-container">
-              <button class="btn category-btn">Dekorativ</button>
-              <button class="btn category-btn">Färgstark</button>
-              <button class="btn category-btn">Tålig</button>
-              <button class="btn category-btn">Blommor</button>
+              <button class="btn category-btn bg-decorative">Dekorativ</button>
+              <button class="btn category-btn bg-colorful">Färgstark</button>
+              <button class="btn category-btn bg-robust">Tålig</button>
+              <button class="btn category-btn bg-flower">Blommor</button>
             </div>
             <h3>Pelargon</h3>
-            <p>
+            <p class="plant-description">
               En vacker och lättskött blomma som trivs både inne och ute under
               sommaren.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!-- Blomsterkalle 2024-12-03-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/blomsterkalle.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Blomsterkalle</p>
+                <time class="date" datetime="2024-12-03">2024-12-03</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/basilika.jpg"
-              alt="Produktbild på basilika"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/basilika.jpg"
+                alt="Produktbild på basilika"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
             <div class="category-btn-container">
-              <button class="btn category-btn">Kryddor</button>
-              <button class="btn category-btn">Doftande</button>
-              <button class="btn category-btn">Solälskande</button>
+              <button class="btn category-btn bg-spicy">Kryddor</button>
+              <button class="btn category-btn bg-fragrant">Doftande</button>
+              <button class="btn category-btn bg-sunloving">Solälskande</button>
             </div>
 
             <h3>Basilika</h3>
-            <p>
+            <p class="plant-description">
               En fantastisk krydda för pastarätter och sallader. Trivs bäst i
               ett soligt fönster.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Krydd-Malin 2024-12-07-->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/krydd-malin.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Krydd-Malin</p>
+                <time class="date" datetime="2024-12-07">2024-12-07</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/sallad.jpg"
-              alt="Produktbild på isbergssallad"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/sallad.jpg"
+                alt="Produktbild på isbergssallad"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
+
             <div class="category-btn-container">
-              <button class="btn category-btn">Snabbväxande</button>
-              <button class="btn category-btn">Ätbart</button>
-              <button class="btn category-btn">Grönska</button>
+              <button class="btn category-btn bg-fast">Snabbväxande</button>
+              <button class="btn category-btn bg-edible">Ätbart</button>
+              <button class="btn category-btn bg-green">Grönska</button>
             </div>
             <h3>Sallad</h3>
-            <p>
+            <p class="plant-description">
               Sallad är en av de enklaste grönsakerna att odla och ger snabba
               resultat för färska måltider.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Grönis 2024-12-06 -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/gronis.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Grönis</p>
+                <time class="date" datetime="2024-12-06">2024-12-06</time>
+              </section>
+            </footer>
           </li>
           <li class="card">
-            <img
-              src="/Assets/images/products/ormbunke.jpg"
-              alt="Produktbild på ormbunke"
-            />
+            <figure class="plant-img-container">
+              <img
+                src="/Assets/images/products/ormbunke.jpg"
+                alt="Produktbild på ormbunke"
+                class="plant-img"
+              />
+              <!--I have deliberately left alt blank as this is an overlay that has a purely decorative purpose -->
+              <img
+                class="overlay"
+                src="/Assets/images/icon-seedling.svg"
+                alt=""
+              />
+            </figure>
             <div class="category-btn-container">
-              <button class="btn category-btn">Luftfuktande</button>
-              <button class="btn category-btn">Grönska</button>
-              <button class="btn category-btn">Dekorativ</button>
+              <button class="btn category-btn bg-air">Luftfuktande</button>
+              <button class="btn category-btn bg-green">Grönska</button>
+              <button class="btn category-btn bg-decorative">Dekorativ</button>
             </div>
             <h3>Ormbunke</h3>
-            <p>
+            <p class="plant-description">
               En klassisk växt som passar perfekt i badrummet eller på skuggiga
               platser.
             </p>
-            <!-- Lägg till avatar här om tid finns -->
-            <!--  Naturvännen 2024-12-08  -->
+            <footer class="card-footer display-flex align-items-center">
+              <figure class="avatar">
+                <img
+                  src="/Assets/images/avatars/naturvannen.png"
+                  alt="Profilbild på författaren"
+                  class="author-img"
+                />
+              </figure>
+
+              <section class="meta-info">
+                <p class="author">Naturvännen</p>
+                <time class="date" datetime="2024-12-08">2024-12-08</time>
+              </section>
+            </footer>
           </li>
         </ul>
       </main>
@@ -382,7 +638,8 @@
         </article>
       </section>
 
-      <footer class="flex-justify-center-container">
+      <!-- Footer of the page -->
+      <footer class="page-footer flex-justify-center-container">
         <div class="display-flex flex-space-between max-width">
           <article class="contact-info display-flex flex-column gap-standard">
             <aside class="logotype-container">
@@ -403,7 +660,6 @@
               Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione
               earum. Iure, eius molestias?
             </p>
-            <!-- Justera ikonerna så att det blir bättre format -->
 
             <a
               href="tel:020-1234567"

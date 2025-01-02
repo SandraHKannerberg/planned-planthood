@@ -175,8 +175,6 @@ h3 {
 a {
   text-decoration: none;
   color: var(--clr-accent);
-  /* transition: all linear 3s;
-  transition: text-decoration 1s ease-in-out; */
 
   &:hover,
   &:focus-visible {
@@ -276,11 +274,6 @@ body {
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
   line-height: 1.5;
-}
-
-/* Bara under utveckling - ta bort innan inlämning */
-.border {
-  border: 3px solid red;
 }
 
 /* LAYOUT */

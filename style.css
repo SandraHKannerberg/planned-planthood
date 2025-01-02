@@ -175,6 +175,8 @@ h3 {
 a {
   text-decoration: none;
   color: var(--clr-accent);
+  /* transition: all linear 3s;
+  transition: text-decoration 1s ease-in-out; */
 
   &:hover,
   &:focus-visible {
@@ -339,13 +341,6 @@ body {
     font-weight: var(--fw-500);
     line-height: 0.9;
   }
-
-  &:hover,
-  &:focus {
-    border: 2px solid var(--clr-accent);
-    outline: none;
-    text-decoration: none;
-  }
 }
 
 /* FOCUS STYLING */
@@ -376,10 +371,16 @@ header {
   background-color: var(--clr-neutral-100);
   padding-block: var(--space-100);
 
-  /* Green color */
-  :has(.logotype-container) {
+  .logotype-container {
     .logotype-text {
       color: var(--clr-accent);
+    }
+
+    &:hover,
+    &:focus {
+      border: 2px solid var(--clr-accent);
+      outline: none;
+      text-decoration: none;
     }
   }
 
@@ -428,10 +429,6 @@ header {
   align-items: center;
   text-align: center;
   gap: var(--space-400);
-
-  p {
-    margin-inline: var(--space-500);
-  }
 
   .gallery {
     background-color: var(--clr-neutral-100);
@@ -586,9 +583,18 @@ main {
   color: var(--clr-neutral-100);
   padding-block: var(--space-600);
 
-  :has(.logotype-container) {
+  .logotype-container {
+    cursor: pointer;
+
     .logotype-text {
       color: var(--clr-neutral-100);
+    }
+
+    &:hover,
+    &:focus {
+      border: 2px solid var(--clr-neutral-100);
+      outline: none;
+      text-decoration: none;
     }
   }
 
@@ -604,6 +610,7 @@ main {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .cta-btn {

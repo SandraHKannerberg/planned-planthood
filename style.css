@@ -552,6 +552,25 @@ main {
   }
 }
 
+/* Categories */
+.categories {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: baseline;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.category-tag {
+  border: none;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  padding-block: 0.3rem;
+  padding-inline: var(--space-100);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-100);
+}
+
 /* Inspiration area */
 .plants-inspiration {
   grid-area: plants-inspiration;
@@ -619,24 +638,6 @@ main {
     background-color: var(--clr-neutral-100);
     color: var(--clr-accent);
     border: 2px solid var(--clr-accent);
-  }
-}
-
-.category-btn {
-  text-transform: uppercase;
-  padding-block: 0.3rem;
-  padding-inline: var(--space-100);
-  font-size: var(--fs-200);
-  font-weight: var(--fw-semi-bold);
-  color: var(--clr-neutral-100);
-  margin-block: 0.2rem;
-
-  &:hover,
-  &:focus {
-    outline-offset: 4px;
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-accent);
-    border: 1px solid var(--clr-accent);
   }
 }
 
@@ -718,7 +719,7 @@ main {
   }
 
   .newsletter {
-    article {
+    .section-wrapper {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
@@ -739,7 +740,7 @@ main {
   }
 
   .plants-inspiration {
-    article {
+    .section-wrapper {
       flex-direction: column;
       text-align: center;
       gap: var(--space-500);
